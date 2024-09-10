@@ -31,7 +31,7 @@ import turtle                           # Tell Python we want to work with the t
 turtle.setup(width=600, height=600)     # Set the size of the window
 
 tina = turtle.Turtle()                  # Create a turtle named tina
-
+tina.hideturtle()
 screen = turtle.Screen()                # Get the screen that tina is on
 set_background_image(screen, "emoji2.png") # Set the background image of the screen
 def set_turtle_image(turtle, image_name):
@@ -53,8 +53,9 @@ screen.setup(width=600, height=600)
 t = turtle.Turtle()
 
 set_turtle_image(t, "moustache1.gif")
-def turtle_clicked(t, x, y):
+def turtle_clicked( x, y):
     """Function that gets called when the user clicks on the turtle"""
+    t.penup()
     t.goto(x, y)
     """This function will make the turtle tilt 20 degrees 18 times, making a full
     circle. It is called by the turtle when the user clicks on it.
@@ -65,7 +66,7 @@ def turtle_clicked(t, x, y):
         y (int): The y coordinate of the click
     """
 
-
+screen.onclick(turtle_clicked)
 turtle.done()     
 
 
