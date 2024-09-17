@@ -22,4 +22,7 @@ at the comments and the code snippets in the previous lessons, like
 # Display the sum of the two numbers 
 
 # Keep the window open
+x = int(input("Enter a number: "))
+y = int(input("Enter another number: "))
+print(x, "+", y, "=", x+y)
 

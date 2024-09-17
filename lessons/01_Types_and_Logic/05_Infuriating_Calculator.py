@@ -38,3 +38,16 @@ you can ask for a string with simpledialog.askstring().
 # If the user enters an unknown operation, display an error message. ( use messagebox.showerror()
 
 # Keep the window open
+x = int(input("Enter a number: "))
+y = int(input("Enter another number: "))
+z = input("Enter an operation(+, -, *, /): ")
+if z == "+":
+    print(x+y)
+elif z == "-":
+    print(x - y)
+elif z == "*":
+    print(x * y)
+elif z == "/":
+    print(x / y)
+else:
+    print("invalid operation")
